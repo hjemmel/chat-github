@@ -1,0 +1,20 @@
+<div class="box span12">
+  <div class="box-header">
+    <h2><i class="icon-search"></i><span class="break"></span>History</h2>
+    <input type="text" id="search-history" class="search-query" value="<%= search %>"></input>
+  </div>
+  <div class="box-content">
+    <div class="history-form">
+      <div class="btn-group">
+        <a id="history-1" class="btn btn-small <% if (days == '1') { %> active <% } %>">1 Day</a>
+        <a id="history-7" class="btn btn-small <% if (days == '7') { %> active <% } %>">1 Week</a>
+        <a id="history-14" class="btn btn-small <% if (days == '14') { %> active <% } %>">2 Weeks</a>
+        <a id="history-30" class="btn btn-small <% if (days == '30') { %> active <% } %>">1 Month</a>
+        <a id="history-90" class="btn btn-small <% if (days == '90') { %> active <% } %>">3 Months</a>
+      </div>
+    </div>
+    <ul id="notifications" class="history">
+      <!-- render via templates -->
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<li style="min-height:80px;">
+    <p>
+        <img class="avatar" src="<%= avatar_url %>" />
+        <strong><a href="<%= github_url %>" target="_blank"><%= login %></strong></a>
+    </p><br>
+  <% if (registered) { %>
+    <a ><span class="label label-success add-conversation">Conversation now</span></a>
+  <% } else { %>
+    <a ><span class="label label-info">Invite</span></a>
+  <% } %>
+</li>

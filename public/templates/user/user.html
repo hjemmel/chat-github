@@ -1,0 +1,3 @@
+<% _.each(users, function (user) { %>
+  <img class="avatar <% if (user.online !== undefined && user.online===false) { %> desaturate <% } %>" src="<%= user.profile.avatar_url %>" title="<%= user.username %>" />
+<% }); %>

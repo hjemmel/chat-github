@@ -1,0 +1,20 @@
+<div class="box span12" onTablet="span12" onDesktop="span5">
+  <div class="box-header">
+    <h2><i class="icon-comment"></i><span class="break"></span>Chat</h2>
+    <div style="float:right;">
+      <!-- <div id="users_online"></div> -->
+    </div>
+  </div>
+  <div class="box-content">
+    <div class="chat-form">
+      <div id="users"></div>
+      <textarea id="id_message" name="message" disabled required></textarea>
+      <button id="button_send" class="btn btn-info" disabled>Send message</button>
+      <button id="button_notification" class="btn btn-danger pull-right"><i class="icon-bullhorn"></i></button>
+      <div id="return_send"></div>
+    </div>  
+    <ul id="chat_live" class="chat">
+      <!-- render via templates -->
+    </ul>
+  </div>
+</div>

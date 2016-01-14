@@ -1,0 +1,12 @@
+<% if (owner_message) { %>
+<li class="right">
+<% } else {  %>
+<li class="left">
+<% } %>
+  <img class="avatar" alt="<%= message.user.first_name + " " + message.user.last_name  %>" src="<%= message.user.profile.avatar_url %>" />
+  <div class="message"><span class="arrow"></span>
+	  <span class="from"><%= message.user.first_name + " " + message.user.last_name  %></span>
+	  <span class="time"> - <%= moment(created_at).format('DD/MM/YYYY HH:mm:ss') %></span>
+	  <div class="text wraptext"><%= message.message %></div>
+  </div> 
+</li>

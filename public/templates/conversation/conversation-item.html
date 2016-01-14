@@ -1,0 +1,21 @@
+<div class="well well-small">
+    <% if (editState == true) { %>
+        <label><h5>Name your channel <small>(empty value show all users in channel)</small></h5></label>
+        <input id="name" class="input-large" type="text" value="<%= model.name %>" class="span5">
+        <a id="save" href="#" class="btn btn-primary">Save</a>
+        or <small><a id="cancel" href="#">Cancel</a></small>
+    <% } else { %>
+        <h5>
+            <a href="#conversation/<%= model.id %>">
+                <%= model.name %>
+                <% if (model.pending_notifications) { %>
+                    <span class="badge badge-important"><%= model.pending_notifications %></span>
+                <% } %>
+            </a><small> - <a id="edit" href="#">Edit</a></small>
+        </h5> 
+    <% } %>
+    <div id="users">
+        <!-- render via templates --> 
+    </div>
+</div>
+

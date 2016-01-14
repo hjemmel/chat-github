@@ -1,0 +1,25 @@
+<li style="min-height:80px;">
+  <p>
+    <img class="avatar" src="<%= link.image_url %>" />
+    <p><small>Posted by <%= link.message.user.first_name %> 
+    - <%= moment(link.message.created_at).format('DD/MM/YYYY HH:mm:ss') %></small></p>
+    <% if (link.original_url) { %>
+    <a href="<%= link.original_url %>" class="link" target="_blank">
+    <% } else { %>
+    <a href="<%= link.url %>" class="link" target="_blank">
+    <% } %>
+      <strong><%= link.title %></strong> - <%= link.description %>
+    </a>
+  </p><br>
+  <% if (read) { %>
+    <a class="read"><span class="label label-success">Read</span></a>
+  <% } else { %>
+    <a class="read"><span class="label label-important">Unread</span></a>
+  <% } %>
+
+  <% if (favorite) { %>
+    <a class="favorite"><span class="label label-warning">Favorited</span></a>
+  <% } else { %>
+    <a class="favorite"><span class="label">Unfavorite</span></a>
+  <% } %>
+</li>

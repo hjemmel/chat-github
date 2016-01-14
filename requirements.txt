@@ -1,0 +1,13 @@
+distribute==0.7.3
+django==1.4
+unipath==0.2.1
+MySQL-python==1.2.3
+django-social-auth==0.7.17
+pygithub
+South==0.7.5
+django-nose
+git+https://github.com/jandersonfc/django-tastypie.git
+django-jenkins
+pep8
+pyflakes
+gevent-socketio
